@@ -6,6 +6,16 @@ import {ThirdComponent} from './first/third/third.component';
 
 
 const routes: Routes = [
+  /*{path: '', redirectTo: 'one', pathMatch: 'full'},
+  {
+    path: 'one',
+    children: [
+      {path: '', redirectTo: 'first', pathMatch: 'full'},
+      {path: 'first', component: FirstComponent},
+      {path: 'second', component: SecondComponent},
+      {path: 'third', component: ThirdComponent}
+    ]
+  }*/
   {path: '', redirectTo: 'first', pathMatch: 'full'},
   {path: 'first', component: FirstComponent},
   {path: 'second', component: SecondComponent},
