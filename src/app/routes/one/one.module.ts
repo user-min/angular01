@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { OneRoutingModule } from './one-routing.module';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
-import {NzDatePickerModule} from "ng-zorro-antd";
+import {NzDatePickerModule, NzTimePickerModule} from 'ng-zorro-antd';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,9 @@ import {NzDatePickerModule} from "ng-zorro-antd";
   imports: [
     CommonModule,
     OneRoutingModule,
-    NzDatePickerModule
+    NzDatePickerModule,
+    FormsModule,
+    NzTimePickerModule
   ]
 })
 export class OneModule { }

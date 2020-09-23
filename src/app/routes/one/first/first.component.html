@@ -1,6 +1,22 @@
 <p>first works!</p>
 
-<!--<div>
-  <span>日期：</span>
-  <nz-date-picker></nz-date-picker>
-</div>-->
+<div>
+  <span>日期[一个日期]：</span>
+  <!--
+  nz-date-picker
+  nzAllowClear: 是否显示清除按钮，只再点击日期选择框时右侧是否显示叉号
+  -->
+
+  <nz-year-picker [nzAllowClear]="'false'" [(ngModel)]="year"></nz-year-picker>
+  <nz-month-picker [nzAllowClear]="'false'" [(ngModel)]="month"></nz-month-picker>
+  <nz-week-picker [nzAllowClear]="'false'" [(ngModel)]="week"></nz-week-picker>
+  <nz-date-picker [nzAllowClear]="'false'" [(ngModel)]="date" (ngModelChange)="log1($event)"></nz-date-picker>
+  <nz-date-picker [nzAllowClear]="'false'" [nzShowTime]="'true'" [(ngModel)]="dateTime" ></nz-date-picker>
+  <nz-time-picker [nzAllowEmpty]="'false'" [ngModel]="time"></nz-time-picker>
+</div>
+
+<div>
+  <span>日期[一时间段]：</span>
+  <nz-range-picker></nz-range-picker>
+</div>
+
