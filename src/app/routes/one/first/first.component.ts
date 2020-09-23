@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-first',
@@ -14,11 +14,16 @@ export class FirstComponent implements OnInit {
   dateTime = new Date();
   time = new Date();
 
+  person = {
+    name: 'zhang',
+    age: 19
+  };
 
   constructor() {
   }
 
   ngOnInit() {
+    console.log(this.person);
   }
 
   log1($event: any) {

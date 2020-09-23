@@ -6,12 +6,17 @@ import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import {NzDatePickerModule, NzTimePickerModule} from 'ng-zorro-antd';
 import {FormsModule} from '@angular/forms';
+import { ThirdComponent } from './first/third/third.component';
 
 
 @NgModule({
   declarations: [
     FirstComponent,
-    SecondComponent
+    SecondComponent,
+    ThirdComponent
+  ],
+  exports: [
+    FirstComponent
   ],
   imports: [
     CommonModule,
