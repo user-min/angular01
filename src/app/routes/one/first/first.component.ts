@@ -28,11 +28,16 @@ export class FirstComponent implements OnInit {
 
   log1($event: any) {
     console.log($event);
-    console.log(this.weekNum($event), this.weekNum1($event));
+    // 有关时间的一些常见函数
+
+    // 今天星期几
+    this.weekNum($event);
+    this.weekNum1($event);
     // 一周开始与结束
     this.weekStart($event);
     this.weekEnd($event);
   }
+
 
   // 今天星期几
   weekNum(date: Date): string {
