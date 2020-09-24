@@ -1,1 +1,36 @@
-<p>second works!</p>
+<!--表格-->
+<table>
+
+  <thead>
+  <tr>
+    <th>表头1</th>
+    <th>表头2</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <tr>
+    <td>内容1</td>
+    <td>内容2</td>
+  </tr>
+  <tr>
+    <td>内容3</td>
+  </tr>
+  </tbody>
+</table>
+
+
+<ul>
+  <li *ngFor="let item of heroes1">
+    {{item}}
+  </li>
+</ul>
+<ul>
+  <li *ngFor="let item of heroes2">
+    {{item.name}}
+  </li>
+</ul>
+
+<p *ngIf="heroes2.length > 3">
+  There are many heroes!
+</p>
