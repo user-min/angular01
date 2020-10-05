@@ -4,13 +4,16 @@ import { CommonModule } from '@angular/common';
 import { TwoRoutingModule } from './two-routing.module';
 import { TwoFirstComponent } from './two-first/two-first.component';
 import { TwoSecondComponent } from './two-second/two-second.component';
+import {NgZorroAntdModule, NzButtonModule} from "ng-zorro-antd";
 
 
 @NgModule({
   declarations: [TwoFirstComponent, TwoSecondComponent],
   imports: [
     CommonModule,
-    TwoRoutingModule
+    TwoRoutingModule,
+    NzButtonModule,
+    NgZorroAntdModule
   ]
 })
 export class TwoModule { }
