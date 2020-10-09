@@ -5,10 +5,15 @@ import { TwoRoutingModule } from './two-routing.module';
 import { TwoFirstComponent } from './two-first/two-first.component';
 import { TwoSecondComponent } from './two-second/two-second.component';
 import {NgZorroAntdModule, NzButtonModule} from "ng-zorro-antd";
+import { TwoThirdComponent } from './two-third/two-third.component';
 
 
 @NgModule({
-  declarations: [TwoFirstComponent, TwoSecondComponent],
+  declarations: [
+    TwoFirstComponent,
+    TwoSecondComponent,
+    TwoThirdComponent
+  ],
   imports: [
     CommonModule,
     TwoRoutingModule,
