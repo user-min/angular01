@@ -14,6 +14,9 @@ export class FirstComponent implements OnInit {
   dateTime = new Date();
   time = new Date();
 
+  time2 = '2020-10-16T06:34:50.000+0000';
+  time21 = null;
+
   person = {
     name: 'zhang',
     age: 19
@@ -24,6 +27,9 @@ export class FirstComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.person);
+
+    // 将time2转化为标准时间
+    this.translation();
   }
 
   log1($event: any) {
@@ -87,4 +93,19 @@ export class FirstComponent implements OnInit {
     return date;
   }
 
+  translation() {
+    // 方法一：
+    // this.time2 = this.time2.substring(0, 19);
+    // this.time21 = new Date(new Date(this.time2.replace(/T/g, ' ').replace(/-/g, '/')).getTime() + 8 * 60 * 60 * 1000);
+
+    // 方法二：
+    const temp = Date.parse(this.time2);
+    console.log('temp', temp);
+    this.time21 = new Date(temp);
+
+    // 方法三：
+    // const temp = new Date(this.time2).toJSON();
+    // console.log(temp);
+    // this.time21 = new Date(+new Date(temp) + 8 * 3600 * 1000).toISOString().replace(/T/g, ' ').replace(/\.[\d]{3}Z/, '');
+  }
 }

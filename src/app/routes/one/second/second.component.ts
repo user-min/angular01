@@ -10,14 +10,6 @@ import {ClassTest} from '../../../core/model/class-test';
 
 export class SecondComponent implements OnInit {
   /*--------------------------------------------数据定义  -------- -----------------------------------------------------------------------*/
-  heroes1 = ['11', '22', '33'];
-
-  heroes2 = [
-    new ClassTest('1', 'test1'),
-    new ClassTest('2', 'test2'),
-    new ClassTest('3', 'test3'),
-    new ClassTest('4', 'test4')
-  ];
 
   /*--------------------------------------------初始化------------------------------------------------------------------------------------*/
   constructor() {

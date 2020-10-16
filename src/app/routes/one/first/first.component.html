@@ -1,12 +1,11 @@
-<p>first works!</p>
-
-<div>
-  <span>日期[一个日期]：</span>
-  <!--
+<p>时间相关操作</p>
+<!--
   nz-date-picker
-  nzAllowClear: 是否显示清除按钮，只再点击日期选择框时右侧是否显示叉号
+  nzAllowClear: 是否显示清除按钮，指再点击日期选择框时右侧是否显示叉号
   -->
-
+<!--日期常见函数-->
+<div>
+  <span>日期：</span>
   <nz-year-picker [nzAllowClear]="'false'" [(ngModel)]="year"></nz-year-picker>
   <nz-month-picker [nzAllowClear]="'false'" [(ngModel)]="month"></nz-month-picker>
   <nz-week-picker [nzAllowClear]="'false'" [(ngModel)]="week"></nz-week-picker>
@@ -15,11 +14,19 @@
   <nz-time-picker [nzAllowEmpty]="'false'" [ngModel]="time"></nz-time-picker>
 </div>
 
+<!--日期段-->
 <div>
-  <span>日期[一时间段]：</span>
+  <span>日期：</span>
   <nz-range-picker></nz-range-picker>
 </div>
 
+<!--'2020-10-16T06:34:50.000+0000'格式的时间怎么显示到页面-->
+<div>
+  <span>日期：</span>
+  <nz-date-picker [(ngModel)]="time21"></nz-date-picker>
+</div>
+
+<!--嵌套页面-->
 <app-third [person]="person"></app-third>
 
 

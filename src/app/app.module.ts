@@ -28,7 +28,7 @@ registerLocaleData(zh);
     HttpClientModule,
     BrowserAnimationsModule,
 
-    OneModule
+    // OneModule
   ],
   /*声明模块中听过的服务，默认为空*/
   providers: [
