@@ -1,4 +1,5 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-first',
@@ -22,10 +23,11 @@ export class FirstComponent implements OnInit {
     age: 19
   };
 
-  constructor() {
+  constructor(private titleService: Title) {
   }
 
   ngOnInit() {
+    this.titleService.setTitle('日期-时间相关问题');
     console.log(this.person);
 
     // 将time2转化为标准时间
